@@ -1,9 +1,20 @@
+/* Initial input required to get height and width of gameBoard */
+.initialContainer {
+  padding: 30%;
+  display: block;
+}
+
+.userInput {
+  display: inline;
+}
+
 /* game board table */
 
 #board td {
   width: 50px;
   height: 50px;
-  border: solid 1px #666;
+  border: solid 1px #5d4954;
+  background-color: #f7f4f0;
 }
 
 /* pieces are div within game table cells: draw as colored circles */
@@ -24,5 +35,5 @@
 }
 
 #column-top td:hover {
-  background-color: gold;
+  background-color: #ffbf46;
 }
