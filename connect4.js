@@ -17,8 +17,8 @@ let board = []; // array of rows, each row is array of cells  (board[y][x])
 
 const makeBoard = () => {
   // TODO: set "board" to empty HEIGHT x WIDTH matrix array
-  Array.from({ length: HEIGHT }).map(() => {
-    board.push(Array.from({ length: WIDTH }));
+  Array.from({ length: WIDTH }).map(() => {
+    board.push(Array.from({ length: HEIGHT }));
   });
 };
 
@@ -56,7 +56,12 @@ const makeHtmlBoard = () => {
 
 const findSpotForCol = (x) => {
   // TODO: write the real version of this, rather than always returning 0
-  return 0;
+  for (y = HEIGHT - 1; y >= 0; y--) {
+    if (!board[y][x]) {
+      return y;
+    }
+  }
+  return null;
 };
 
 /** placeInTable: update DOM to place piece into HTML table of board */
@@ -64,16 +69,19 @@ const findSpotForCol = (x) => {
 function placeInTable(y, x) {
   // TODO: make a div and insert into correct table cell
   const pieceEl = document.createElement("div");
-  pieceEl.classList.add("peice");
+  pieceEl.classList.add("piece");
   pieceEl.classList.add(`p${currPlayer}`);
   const activeCell = document.getElementById(`${y}-${x}`);
   activeCell.append(pieceEl);
+  // console.log(pieceEl);
+  // console.log(activeCell);
 }
 
 /** endGame: announce game end */
 
 const endGame = (msg) => {
   // TODO: pop up alert message
+  alert(msg);
 };
 
 /** handleClick: handle click of column top to play piece */
@@ -90,6 +98,7 @@ const handleClick = (evt) => {
 
   // place piece in board and add to HTML table
   // TODO: add line to update in-memory board
+  board[y][x] = currPlayer;
   placeInTable(y, x);
 
   // check for win
@@ -99,13 +108,18 @@ const handleClick = (evt) => {
 
   // check for tie
   // TODO: check if all cells in board are filled; if so call, call endGame
+  if (board.every((row) => row.every((cell) => cell))) {
+    return endGame("Its a Tie!");
+  }
 
   // switch players
   // TODO: switch currPlayer 1 <-> 2
+  currPlayer = currPlayer === 1 ? 2 : 1;
 };
 
 /** checkForWin: check board cell-by-cell for "does a win start here?" */
 
+// Callback function to check if its a win
 const checkForWin = () => {
   const _win = (cells) => {
     // Check four cells to see if they're all color of current player

@@ -28,10 +28,10 @@
 }
 
 /* TODO: make pieces red/blue,  depending on player 1/2 piece */
-.piece.p1 {
+.p1 {
   background-color: red;
 }
-.piece.p2 {
+.p2 {
   background-color: blue;
 }
 
