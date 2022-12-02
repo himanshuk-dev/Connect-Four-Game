@@ -1,14 +1,13 @@
 # Connect-Four-Game
 
-![Connect-Four-Game](https://user-images.githubusercontent.com/87880250/205191478-ea64bd65-4298-4771-aac6-5f21a58a52d2.png)
-
-
 
 ## Description
 
 - This project is part of Springboard exercises. Connect four game asks players to take their turns alternatively, and the DOM updates to reflect the player pieces. Once the four rows matches (horizontal/ vertical/ diagonal), the player wins and the winner is announced. Once done playing, players use reset button to restart the game.
 
 - This project utilizes features pf ES2015, use DOM manipluation to bring pieces on gameBoard. The game board is built using advanced array method like create array using map method. 
+
+Enjoy the game here: https://himanshukumar30.github.io/Connect-Four-Game/
 
 ## Getting Started
 
