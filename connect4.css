@@ -44,3 +44,10 @@
 #column-top td:hover {
   background-color: #ffbf46;
 }
+
+button {
+  padding: 0.5%;
+  background-color: blanchedalmond;
+  margin: 1%;
+  width: 5em;
+}
