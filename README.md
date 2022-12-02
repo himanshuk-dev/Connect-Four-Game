@@ -19,7 +19,11 @@ Enjoy the game here: https://himanshukumar30.github.io/Connect-Four-Game/
 
 
 
-https://user-images.githubusercontent.com/87880250/205192180-bfbcbf7d-6046-4565-8d01-4482ebe4f6d8.mov
+
+https://user-images.githubusercontent.com/87880250/205195462-2388a9eb-b680-41da-96db-863c74bf9b64.mov
+
+
+
 
 
 
